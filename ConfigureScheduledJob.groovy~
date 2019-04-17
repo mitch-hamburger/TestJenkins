@@ -11,7 +11,7 @@ job("$Title") {
         cron("$Schedule")
     }
     steps {
-        shell(readFileFromWorkspace('../Initialize/RunJob.sh'))
+        shell(readFileFromWorkspace('../RunJob.sh'))
     }
     publishers {
         textFinder("\"success\":false", "", true, false, false)

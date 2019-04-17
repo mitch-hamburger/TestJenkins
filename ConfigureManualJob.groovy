@@ -8,7 +8,7 @@ job("$Title") {
             StatusChangeHandler: "$StatusChangeHandler",
             ArgList: "$ArgList")
     steps {
-        shell(readFileFromWorkspace('../RunJob.sh'))
+        shell(readFileFromWorkspace('../Initialize/RunJob.sh'))
     }
     publishers {
         textFinder("\"success\":false", "", true, false, false)
